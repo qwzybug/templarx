@@ -4,8 +4,8 @@ $measures = 4
 
 probabilities = {}
 
-<% probabilities.each_with_index do |ps, i| %>
-  probabilities[<%= 36 + i %>] = <%= ps.inspect %>
+<% probabilities.each do |channel, probs| %>
+  probabilities[<%= channel %>] = <%= probs.inspect %>
 <% end %>
 
 def note(midi_note_number)
